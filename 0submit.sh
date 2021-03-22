@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --time=00:15:00
+#SBATCH --time=01:00:00
 #SBATCH --job-name=KnC_timed
 #SBATCH --output=%x-%j.out
 #SBATCH --account=def-nike-ab
