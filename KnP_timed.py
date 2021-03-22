@@ -27,6 +27,6 @@ for n in range(7,161):
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
-        t = (time.time()-startTime)
-        print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",g,"time=",t)
-        print(Kn)
+    t = (time.time()-startTime)
+    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
+    print(Kn)
