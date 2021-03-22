@@ -1,14 +1,9 @@
-#!/bin/python
-#SBATCH --time=00:15:00
-#SBATCH --job-name=KnC_timed
-#SBATCH --output=%x-%j.out
-
 from minorminer import find_embedding
 import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for n in range(1,70):
+for n in range(3,20):
     startTime = time.time()
     q = 1
     g = (n-2)//4+1
