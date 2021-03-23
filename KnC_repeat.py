@@ -4,7 +4,7 @@ import networkx as nx
 import dwave_networkx as dnx
 
 for q in range(1,500):
-    n = 22
+    n = 25
     g = (n-2)//4+1
     nodes = 0
     edges = n*(n-1)/2
@@ -20,6 +20,6 @@ for q in range(1,500):
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
-    if (nodes < 152) and (lc < 10):
+    if (nodes < 195) and (lc < 11):
         print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q)
 print("done")
