@@ -8,4 +8,6 @@
 #SBATCH --mail-user=kathryn@pinkninja.net
 #SBATCH --mail-type=ALL
 
+module load python python/3.7.4
+source ~/ENV/bin/activate
 python KnC_repeat.py
