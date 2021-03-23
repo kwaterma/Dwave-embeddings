@@ -6,7 +6,7 @@ import time
 for n in range(157,201):
     startTime = time.time()
     s = 1
-    g = (n-2)//4+3
+    g = (n-2)//4+3 #+1 works for n>1, +2 for n>155, +3 for n>157
     nodes = 0
     edges = n*(n-1)/2
     chains = 0
