@@ -22,5 +22,4 @@ for q in range(1,500):
                 lc = len(Kn[i])
     if (nodes < 152) and (lc < 10):
         print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q)
-        print(Kn)
 print("done")
