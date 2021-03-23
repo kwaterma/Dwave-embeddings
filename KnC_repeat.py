@@ -3,7 +3,7 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for q in range(1,500):
+for q in range(1,5000):
     startTime = time.time()
     n = 37
     g = (n-2)//4+1
@@ -22,6 +22,6 @@ for q in range(1,500):
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
     t = (time.time()-startTime)
-    if (nodes < 345) and (lc < 16):
-        print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
+    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
+    print(Kn)
 print("done")
