@@ -22,6 +22,6 @@ for q in range(1,5000):
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
     t = (time.time()-startTime)
-    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
+    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
     print(Kn)
 print("done")
