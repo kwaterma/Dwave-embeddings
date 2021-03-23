@@ -1,10 +1,11 @@
 from minorminer import find_embedding
-import random
 import networkx as nx
 import dwave_networkx as dnx
+import time
 
 for q in range(1,500):
-    n = 26
+    startTime = time.time()
+    n = 40
     g = (n-2)//4+1
     nodes = 0
     edges = n*(n-1)/2
@@ -20,6 +21,7 @@ for q in range(1,500):
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
-    if (nodes < 216) and (lc < 11):
-        print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q)
+    t = (time.time()-startTime)
+    if (nodes < 530) and (lc < 19):
+        print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
 print("done")
