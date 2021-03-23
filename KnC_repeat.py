@@ -5,7 +5,7 @@ import time
 
 for q in range(1,500):
     startTime = time.time()
-    n = 40
+    n = 41
     g = (n-2)//4+1
     nodes = 0
     edges = n*(n-1)/2
@@ -22,6 +22,6 @@ for q in range(1,500):
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
     t = (time.time()-startTime)
-    if (nodes < 530) and (lc < 19):
+    if (nodes < 550) and (lc < 19):
         print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
 print("done")
