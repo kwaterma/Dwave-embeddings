@@ -3,16 +3,22 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for q in range(1,5000):
+def pegasus1(g): # 4 pegasus graphs in a single layer (4 edges between cells)
+    G=dnx.chimera_graph(g,g,4)
+    for a in range(0,g*g*8-1,2):
+        G.add_edge(a,a+1)
+    return G
+
+for s in range(1,5000):
     startTime = time.time()
     n = 40
-    g = (n-3)//4
+    g = (n+1)//4 #(works for pegasus1(g) for n>2
     nodes = 0
     edges = n*(n-1)/2
     chains = 0
     c_edges = 0
     lc = 0   #longest chain
-    Kn = find_embedding(nx.complete_graph(n), dnx.pegasus_graph(g), random_seed=q)
+    Kn = find_embedding(nx.complete_graph(n), dnx.pegasus_graph(g), random_seed=s)
     for i in range(0,n):
         nodes += len(Kn[i])
         if len(Kn[i]) > 1:
@@ -22,6 +28,6 @@ for q in range(1,5000):
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
     t = (time.time()-startTime)
-    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",q,"time=",t)
+    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",s,"time=",t)
     print(Kn)
 print("done")
