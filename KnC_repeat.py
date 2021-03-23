@@ -5,7 +5,7 @@ import time
 
 for q in range(1,5000):
     startTime = time.time()
-    n = 37
+    n = 38
     g = (n-2)//4+1
     nodes = 0
     edges = n*(n-1)/2
