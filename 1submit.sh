@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --time=11:30:00
+#SBATCH --time=71:00:00
 #SBATCH --job-name=KnP_timed
 #SBATCH --output=%x-%j.out
 #SBATCH --error=ERROR-%j.out
