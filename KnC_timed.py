@@ -23,5 +23,4 @@ for n in range(150,201):
                 lc = len(Kn[i])
     t = (time.time()-startTime)
     print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",s,"time=",t)
-    print(Kn)
 print("done")
