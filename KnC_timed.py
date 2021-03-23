@@ -3,7 +3,7 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for n in range(3,161):
+for n in range(3,30):
     startTime = time.time()
     s = 1
     g = (n-2)//4+1
@@ -24,3 +24,4 @@ for n in range(3,161):
     t = (time.time()-startTime)
     print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",edges,"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",s,"time=",t)
     print(Kn)
+print("done")
