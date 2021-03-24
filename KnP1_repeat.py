@@ -3,6 +3,10 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
+n = int(sys.argv[1])
+if n < 3:
+    raise Exception('no edges for Kn for n<3')
+
 def pegasus1(g): # 4 pegasus graphs in a single layer (4 edges between cells)
     G=dnx.chimera_graph(g,g,4)
     for a in range(0,g*g*8-1,2):
@@ -11,8 +15,7 @@ def pegasus1(g): # 4 pegasus graphs in a single layer (4 edges between cells)
 
 for s in range(1,200000):
     startTime = time.time()
-    n = 42
-    g = (n+1)//4 #(works for pegasus1(g) for n>2
+    g = (n+1)//4 #works for pegasus1(g) for n>2
     nodes = 0
     edges = n*(n-1)/2
     chains = 0
