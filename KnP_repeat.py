@@ -5,7 +5,7 @@ import time
 
 for s in range(1,200000):
     startTime = time.time()
-    n = 41
+    n = 47
     g = (n+1)//4 #(works for pegasus_graph(g) for n>6
     nodes = 0
     edges = n*(n-1)/2
