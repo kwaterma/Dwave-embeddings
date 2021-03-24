@@ -3,9 +3,12 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
+n = int(sys.argv[1])
+if n < 7:
+    raise Exception('no edges for Kn for n<7')
+
 for s in range(1,200000):
     startTime = time.time()
-    n = 39
     g = (n+1)//4 #(works for pegasus_graph(g) for n>6
     nodes = 0
     edges = n*(n-1)/2
@@ -22,6 +25,6 @@ for s in range(1,200000):
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
     t = (time.time()-startTime)
-    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",s,"time=",t)
+    print("n=",n,"M=",g,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",s,"time=",t)
     print(Kn)
 print("done")
