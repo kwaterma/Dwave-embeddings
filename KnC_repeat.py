@@ -3,9 +3,12 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
+n = int(sys.argv[1])
+if n < 2:
+    raise Exception('no edges for Kn for n<2')
+
 for s in range(1,200000):
     startTime = time.time()
-    n = 29
     g = (n-2)//4+1
     nodes = 0
     edges = n*(n-1)/2
