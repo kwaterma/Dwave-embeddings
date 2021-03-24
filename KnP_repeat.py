@@ -3,7 +3,7 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for s in range(1,5000):
+for s in range(1,200000):
     startTime = time.time()
     n = 41
     g = (n+1)//4 #(works for pegasus_graph(g) for n>6
