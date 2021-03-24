@@ -2,6 +2,7 @@ from minorminer import find_embedding
 import networkx as nx
 import dwave_networkx as dnx
 import time
+import sys
 
 n = int(sys.argv[1])
 if n < 3:
