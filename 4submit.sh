@@ -10,4 +10,4 @@
 
 module load python python/3.7.4
 source ~/ENV/bin/activate
-python KnP_repeat.py
+python KnP_repeat.py 48
