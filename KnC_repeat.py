@@ -8,20 +8,20 @@ n = int(sys.argv[1])
 if n < 2:
     raise Exception('no edges for Kn for n<2')
 
-for s in range(1,200000):
+for s in range(1,5000):
     startTime = time.time()
     g = (n-2)//4+1
     nodes = 0
     edges = n*(n-1)/2
-    chains = 0
+    c = 0
     c_edges = 0
     lc = 0   #longest chain
-    sc = 100
+    sc = 100 #shortest chain
     Kn = find_embedding(nx.complete_graph(n), dnx.chimera_graph(g,g,4), random_seed=s)
     for i in range(0,n):
         nodes += len(Kn[i])
         if len(Kn[i]) > 1:
-            chains += 1
+            c += 1
             edges += len(Kn[i])-1
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
@@ -29,6 +29,6 @@ for s in range(1,200000):
             if len(Kn[i]) < sc:
                 sc = len(Kn[i])
     t = (time.time()-startTime)
-    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"chain differnce",int(lc-sc),"seed=",s,"time=",t)
+    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",c,"chain edges=",c_edges,"longest chain=",lc,"chain differnce",int(lc-sc),"seed=",s,"time=",t)
     print(Kn)
 print("done")
