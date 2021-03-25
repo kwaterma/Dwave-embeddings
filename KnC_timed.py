@@ -3,10 +3,10 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for n in range(214,501):
+for n in range(220,501):
     startTime = time.time()
     s = 1
-    g = (n-2)//4+6 #+1 works for n>1, +2 for n>155, +3 for n>157, +4 for n>172, +5 for n>184, +6 for >214
+    g = (n-2)//4+6 #+1 works for n>1, +2 for n>155, +3 for n>157, +4 for n>172, +5 for n>184, +6 for >214, +7 for n>220,
     nodes = 0
     edges = n*(n-1)/2
     chains = 0
