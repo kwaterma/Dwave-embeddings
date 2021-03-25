@@ -15,19 +15,22 @@ for n in range(223,501):
     g = (n+1)//4+5 #+0 works for pegasus_graph(g) for n>7, +1 for n>191, +3 for n>211, +4 for n>217, +5 for n>223
     nodes = 0
     edges = n*(n-1)/2
-    chains = 0
+    c = 0
     c_edges = 0
     lc = 0   #longest chain
+    sc = 100 #shortest chain
     Kn = find_embedding(nx.complete_graph(n), dnx.pegasus_graph(g), random_seed=s)
     for i in range(0,n):
         nodes += len(Kn[i])
         if len(Kn[i]) > 1:
-            chains += 1
+            c += 1
             edges += len(Kn[i])-1
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
+            if len(Kn[i]) < sc:
+                sc = len(Kn[i])
     t = (time.time()-startTime)
-    print("n=",n,"M=",g,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"seed=",s,"time=",t)
+    print("n=",n,"M=",g,"nodes=",nodes,"edges=",int(edges),"chains=",c,"chain edges=",c_edges,"longest chain=",lc,"chain difference",int(lc-sc),"seed=",s,"time=",t)
     print(Kn)
 print("done")
