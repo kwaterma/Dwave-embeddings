@@ -9,10 +9,10 @@ def pegasus1(g): # 4 pegasus graphs in a single layer (4 edges between cells)
         G.add_edge(a,a+1)
     return G
 
-for n in range(223,501):
+for n in range(228,501):
     startTime = time.time()
     s = 1
-    g = (n+1)//4+7 #+0 works for pegasus1(g) for n>2, +1 for n>157, +2 for n>178, +3 for n>190, +4 for n>192, +5 for n>12, +6 for n>218, +7 for n>223
+    g = (n+1)//4+7 #+0 works for pegasus1(g) for n>2, +1 for n>157, +2 for n>178, +3 for n>190, +4 for n>192, +5 for n>12, +6 for n>218, +7 for n>223, +8 for n>228
     nodes = 0
     edges = n*(n-1)/2
     c = 0
