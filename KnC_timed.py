@@ -3,7 +3,7 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for n in range(233,501):
+for n in range(155,501):
     startTime = time.time()
     s = 1
     g = (n-2)//4+1 #+1 works for n<155
