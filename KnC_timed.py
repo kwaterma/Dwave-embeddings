@@ -16,14 +16,14 @@ for n in range(233,501):
     Kn = find_embedding(nx.complete_graph(n), dnx.chimera_graph(g,g,4), random_seed=s)
     for i in range(0,n):
         nodes += len(Kn[i])
+        if len(Kn[i]) < sc:
+            sc = len(Kn[i])
         if len(Kn[i]) > 1:
             chains += 1
             edges += len(Kn[i])-1
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
-            if len(Kn[i]) < sc:
-                sc = len(Kn[i])
     t = (time.time()-startTime)
     print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"chain difference",int(lc-sc),"seed=",s,"time=",t)
     print(Kn)
