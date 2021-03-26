@@ -7,7 +7,7 @@ for n in range(155,501):
     startTime = time.time()
     s = 1
     g = (n-2)//4+1 #+1 works for n<155
-    if n > 155: tried to correct for more cells needed for larger calculations
+    if n > 155: #tried to correct for more cells needed for larger calculations
         g += (n-137)//8
     nodes = 0
     edges = n*(n-1)/2
