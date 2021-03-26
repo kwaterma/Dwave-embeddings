@@ -1,4 +1,5 @@
 #!/bin/bash -l
+#SBATCH --array=14-35
 #SBATCH --time=71:00:00
 #SBATCH --job-name=KnP1_repeat
 #SBATCH --output=%x-%j.out
@@ -10,4 +11,4 @@
 
 module load python python/3.7.4
 source ~/ENV/bin/activate
-python KnP1_repeat.py 44
+python KnP1_repeat.py $SLURM_ARRAY_TASK_ID
