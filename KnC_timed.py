@@ -12,7 +12,7 @@ for n in range(225,501):
     chains = 0
     c_edges = 0
     lc = 0   #longest chain
-    sc = 50 #shortest chain
+    sc = 100 #shortest chain
     Kn = find_embedding(nx.complete_graph(n), dnx.chimera_graph(g,g,4), random_seed=s)
     for i in range(0,n):
         nodes += len(Kn[i])
