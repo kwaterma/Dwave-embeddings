@@ -8,7 +8,7 @@ n = int(sys.argv[1])
 if n < 2:
     raise Exception('no edges for Kn for n<2')
 
-for s in range(1,5000):
+for s in range(1,200001):
     startTime = time.time()
     g = (n-2)//4+1
     nodes = 0
