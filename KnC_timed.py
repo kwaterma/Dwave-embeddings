@@ -6,7 +6,7 @@ import time
 for n in range(233,501):
     startTime = time.time()
     s = 1
-    g = (n-2)//4+10 #+1 works for n>1, +2 for n>155, +3 for n>157, +4 for n>172, +5 for n>184, +6 for >214, +8 for n>220, +9 for n>225, +10 for n>233
+    g = (n-2)//4+11 #+1 works for n>1, +2 for n>155, +3 for n>157, +4 for n>172, +5 for n>184, +6 for >214, +8 for n>220, +9 for n>225, +10 for n>233
     nodes = 0
     edges = n*(n-1)/2
     chains = 0
