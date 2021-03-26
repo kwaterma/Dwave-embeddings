@@ -6,10 +6,12 @@ import time
 for n in range(233,501):
     startTime = time.time()
     s = 1
-    g = (n-2)//4+11 #+1 works for n>1, +2 for n>155, +3 for n>157, +4 for n>172, +5 for n>184, +6 for >214, +8 for n>220, +9 for n>225, +10 for n>233
+    g = (n-2)//4+1 #+1 works for n<155
+    if n > 155: tried to correct for more cells needed for larger calculations
+        g += (n-137)//8
     nodes = 0
     edges = n*(n-1)/2
-    chains = 0
+    c = 0
     c_edges = 0
     lc = 0   #longest chain
     sc = 100 #shortest chain
@@ -19,12 +21,12 @@ for n in range(233,501):
         if len(Kn[i]) < sc:
             sc = len(Kn[i])
         if len(Kn[i]) > 1:
-            chains += 1
+            c += 1
             edges += len(Kn[i])-1
             c_edges += len(Kn[i])-1
             if len(Kn[i]) > lc:
                 lc = len(Kn[i])
     t = (time.time()-startTime)
-    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",chains,"chain edges=",c_edges,"longest chain=",lc,"chain difference",int(lc-sc),"seed=",s,"time=",t)
+    print("n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",c,"chain edges=",c_edges,"longest chain=",lc,"chain difference",int(lc-sc),"seed=",s,"time=",t)
     print(Kn)
 print("done")
