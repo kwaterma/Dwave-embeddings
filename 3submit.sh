@@ -2,8 +2,8 @@
 #SBATCH --array=10-13
 #SBATCH --time=71:00:00
 #SBATCH --job-name=KnC_repeat
-#SBATCH --output=%x-%j-$SLURM_ARRAY_TASK_ID.out
-#SBATCH --error=%x-%j-$SLURM_ARRAY_TASK_ID.err
+#SBATCH --output=%x-%j.out
+#SBATCH --error=%x-%j.err
 #SBATCH --account=def-nike-ab
 #SBATCH --mem=3900
 #SBATCH --mail-user=kathryn@pinkninja.net
