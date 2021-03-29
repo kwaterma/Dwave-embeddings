@@ -16,6 +16,7 @@ for s in range(1,200001):
     c = 0
     c_edges = 0
     lc = 0   #longest chain
+    sc = 100 #shortest chain
     Kn = find_embedding(nx.complete_graph(n), dnx.pegasus_graph(g), random_seed=s)
     for i in range(0,n):
         nodes += len(Kn[i])
