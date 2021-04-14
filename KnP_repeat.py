@@ -10,7 +10,7 @@ if n < 7:
 
 for s in range(1,200001):
     startTime = time.time()
-    g = (n+1)//4+1 #+1 for n>160
+    g = (n+1)//4+2 #+1 for n>160, +2 for n>170
     nodes = 0
     edges = n*(n-1)/2
     c = 0
