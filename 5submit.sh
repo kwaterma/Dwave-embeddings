@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --array=171-190
+#SBATCH --array=176-195
 #SBATCH --time=167:30:00
 #SBATCH --job-name=KnP1_repeat
 #SBATCH --output=%x-%j.out
