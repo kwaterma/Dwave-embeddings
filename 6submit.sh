@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --array=63,64
+#SBATCH --array=63,64,65,70,71,72,73,74,75,76,77,78,79,80,82,83,84,85,86,87
 #SBATCH --time=167:30:00
 #SBATCH --job-name=KnC_repeat
 #SBATCH --output=%x-%j.out
