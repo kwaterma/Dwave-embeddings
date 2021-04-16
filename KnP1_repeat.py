@@ -16,7 +16,7 @@ def pegasus1(g): # 4 pegasus graphs in a single layer (4 edges between cells)
 
 for s in range(1,200000):
     startTime = time.time()
-    g = (n+1)//4+5 #+1 for n>140, +2 for n>160, +3 for n>170, +4 for n>175, +5 for n>180
+    g = (n+1)//4+6 #+1 for n>140, +2 for n>160, +3 for n>170, +4 for n>175, +5 for n>180, +6 for n>185
     nodes = 0
     edges = n*(n-1)/2
     c = 0
