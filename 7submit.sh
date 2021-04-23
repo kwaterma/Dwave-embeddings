@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#SBATCH --time=71:00:00
+#SBATCH --time=167:30:00
 #SBATCH --job-name=KmnC_timed
 #SBATCH --output=%x-%j.out
 #SBATCH --error=%x-%j.err
