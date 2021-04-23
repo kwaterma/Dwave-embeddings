@@ -7,7 +7,7 @@ for m in range(41,200):
     for n in range(1,m+1):
         startTime = time.time()
         s = 1
-        g = ((((m+3)//2)*((n+6)//4))**0.5)//1+4 # +1 for m>10*, +2 for m>17*, +3 for m>22*, +4 for m>33, +5 for m>40
+        g = ((((m+3)//2)*((n+6)//4))**0.5)//1+5 # +1 for m>10*, +2 for m>17*, +3 for m>22*, +4 for m>33, +5 for m>40
         nodes = 0
         edges = m*n
         c = 0
