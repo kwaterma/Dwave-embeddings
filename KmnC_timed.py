@@ -7,7 +7,7 @@ for m in range(2,24):
     for n in range(1,m+1):
         startTime = time.time()
         s = 1
-        g = (((m//2)*(n//4))**0.5)//1
+        g = ((((m)//2)*((n+3)//4))**0.5)//1
         nodes = 0
         edges = m*n
         c = 0
