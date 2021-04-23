@@ -5,7 +5,6 @@ import time
 
 for m in range(2,24):
     for n in range(1,m+1):
-        print(m,n,g)
         startTime = time.time()
         s = 1
         g = int((((m//2)*(n//4))**0.5)//2)
@@ -27,6 +26,7 @@ for m in range(2,24):
 #                if len(Kn[i]) > lc:
 #                    lc = len(Kn[i])
         t = (time.time()-startTime)
+        print(m,n,g) #remove later
 #        print("m=",m,"n=",n,"cells=",g**2,"nodes=",nodes,"edges=",int(edges),"chains=",c,"chain edges=",c_edges,"longest chain=",lc,"chain difference=",int(lc-sc),"seed=",s,"time=",t)
 #        print(Kn)
 print("done")
