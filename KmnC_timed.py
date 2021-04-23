@@ -3,11 +3,11 @@ import networkx as nx
 import dwave_networkx as dnx
 import time
 
-for m in range(2,200):
+for m in range(10,200):
     for n in range(1,m+1):
         startTime = time.time()
         s = 1
-        g = ((((m+3)//2)*((n+4)//4))**0.5)//1
+        g = ((((m+3)//2)*((n+4)//4))**0.5)//1+1
         nodes = 0
         edges = m*n
         c = 0
